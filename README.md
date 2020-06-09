@@ -37,7 +37,7 @@ Here's a short list of all the things you'll need to do. Don't worry - you'll be
 
 To get started, follow these simple steps. 
 
-### Clone and Open the Code
+### Clone and Open the Code 
 
 The Phippy and Friends repository is public. Just clone it to your local machine and open the folder up in Visual Studio Code to get started. 
 
