@@ -32,7 +32,7 @@ jobs:
 
     - uses: azure/k8s-create-secret@v1
       with:
-        namespace: ganesclusterd44c
+        namespace: ganesclusterd45s
         container-registry-url: ganesacr.azurecr.io
         container-registry-username: ${{ secrets.acr_ganesacr_username }}
         container-registry-password: ${{ secrets.acr_ganesacr_password }}
@@ -40,7 +40,7 @@ jobs:
        
     - uses: azure/k8s-deploy@users/koushdey/addAnnotationsk8sDeploy
       with:
-        namespace: ganesclusterd44c
+        namespace: ganesclusterd45s
         manifests: |
           manifests/deployment.yml
           manifests/service.yml
