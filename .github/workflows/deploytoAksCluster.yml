@@ -14,7 +14,7 @@ jobs:
     - name: Build and push image to ACR
       id: build-image
       run: |
-        docker build "$GITHUB_WORKSPACE/nodebrady" -f  "nodebrady/Dockerfile" -t ganesacr.azurecr.io/ganescluster:${{ github.sha }}
+        docker build "$GITHUB_WORKSPACE/captainkube" -f  "captainkube/Dockerfile" -t ganesacr.azurecr.io/ganescluster:${{ github.sha }}
         docker push ganesacr.azurecr.io/ganescluster:${{ github.sha }}
     
     - uses: azure/k8s-set-context@v1
