@@ -24,15 +24,15 @@ jobs:
     
     - name: Create namespace
       run: |
-        namespacePresent=`kubectl get namespace | grep ganesclusterd44c | wc -l`
+        namespacePresent=`kubectl get namespace | grep ganesclustere54c | wc -l`
         if [ $namespacePresent -eq 0 ]
         then
-            echo `kubectl create namespace ganesclusterd44c`
+            echo `kubectl create namespace ganesclustere54c`
         fi
 
     - uses: azure/k8s-create-secret@v1
       with:
-        namespace: ganesclusterd44c
+        namespace: ganesclustere54c
         container-registry-url: ganesacr.azurecr.io
         container-registry-username: ${{ secrets.acr_ganesacr_username }}
         container-registry-password: ${{ secrets.acr_ganesacr_password }}
@@ -40,7 +40,7 @@ jobs:
        
     - uses: azure/k8s-deploy@users/koushdey/addAnnotationsk8sDeploy
       with:
-        namespace: ganesclusterd44c
+        namespace: ganesclustere54c
         manifests: |
           manifests/deployment.yml
           manifests/service.yml
